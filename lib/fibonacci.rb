@@ -17,7 +17,7 @@ def fibs(number)
       result.push(result[-2] + result[-1])
     end
   end
-  p result
+  result
 end
 
 # recursive method to generate the fibonacci sequence up to n values.
@@ -25,17 +25,17 @@ end
 def fibs_rec(number, result = [0, 1])
   case number
   when 0
-    p result = []
+    result = []
   when 1
-    p result = [0]
+    result = [0]
   when 2
-    p result
+    result
   end
 
   return unless number >= 3
 
   result.push(result[-2] + result[-1])
-  return p result if number == 3
+  return result if number == 3
 
   fibs_rec(number - 1, result)
 end
